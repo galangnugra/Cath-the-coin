@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catch the Coin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- MENU AWAL -->
+        <section id="menu" class="screen">
+
+            <h1>🪙 Catch the Coin</h1>
+            <p class="subtitle">Tangkap koin sebanyak mungkin!</p>
+
+            <div class="form">
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    maxlength="20"
+                >
+
+                <input
+                    type="tel"
+                    id="whatsapp"
+                    placeholder="Nomor WhatsApp"
+                    maxlength="15"
+                >
+
+                <button onclick="startGame()">
+                    MULAI BERMAIN
+                </button>
+
+                <button class="leaderboard-btn" onclick="showLeaderboard()">
+                    🏆 LEADERBOARD
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- GAME -->
+        <section id="gameScreen" class="screen hidden">
+
+            <div class="game-info">
+
+                <div>
+                    👤 <span id="playerName"></span>
+                </div>
+
+                <div>
+                    ⭐ Skor: <span id="score">0</span>
+                </div>
+
+                <div>
+                    ⏱️ <span id="time">30</span>
+                </div>
+
+            </div>
+
+            <div id="gameArea">
+
+                <div id="coin">🪙</div>
+
+            </div>
+
+            <button class="back-btn" onclick="backToMenu()">
+                Kembali
+            </button>
+
+        </section>
+
+
+        <!-- HASIL -->
+        <section id="resultScreen" class="screen hidden">
+
+            <h2>🎉 Permainan Selesai!</h2>
+
+            <p>Username:</p>
+            <h3 id="resultName"></h3>
+
+            <p>Skor kamu:</p>
+            <div class="final-score" id="finalScore">
+                0
+            </div>
+
+            <p id="saveStatus">
+                Menyimpan skor...
+            </p>
+
+            <button onclick="backToMenu()">
+                MAIN LAGI
+            </button>
+
+            <button
+                class="leaderboard-btn"
+                onclick="showLeaderboard()"
+            >
+                🏆 LIHAT LEADERBOARD
+            </button>
+
+        </section>
+
+
+        <!-- LEADERBOARD -->
+        <section id="leaderboardScreen" class="screen hidden">
+
+            <h2>🏆 LEADERBOARD</h2>
+
+            <div id="leaderboard">
+                Memuat data...
+            </div>
+
+            <button onclick="backToMenu()">
+                KEMBALI
+            </button>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
