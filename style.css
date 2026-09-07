@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+}
+
+.screen {
+    background: #1f2937;
+    border-radius: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.hidden {
+    display: none !important;
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #9ca3af;
+    margin-bottom: 30px;
+}
+
+
+/* FORM */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #22c55e;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+.leaderboard-btn {
+    background: #f59e0b;
+}
+
+.back-btn {
+    margin-top: 15px;
+    background: #374151;
+}
+
+
+/* GAME */
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+}
+
+#gameArea {
+    position: relative;
+
+    width: 100%;
+    height: 450px;
+
+    background: #0f172a;
+
+    border: 3px solid #374151;
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+#coin {
+    position: absolute;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition: 0.1s;
+}
+
+
+/* RESULT */
+
+.final-score {
+    font-size: 60px;
+    font-weight: bold;
+
+    color: #facc15;
+
+    margin: 10px 0 20px;
+}
+
+#saveStatus {
+    margin-bottom: 20px;
+    color: #9ca3af;
+}
+
+
+/* LEADERBOARD */
+
+#leaderboard {
+    margin-bottom: 20px;
+}
+
+.rank {
+    display: grid;
+
+    grid-template-columns: 50px 1fr 80px;
+
+    align-items: center;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    background: #374151;
+
+    border-radius: 10px;
+}
+
+.rank-number {
+    font-weight: bold;
+}
+
+.rank-name {
+    text-align: left;
+}
+
+.rank-score {
+    font-weight: bold;
+    color: #facc15;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 400px) {
+
+    .screen {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #gameArea {
+        height: 400px;
+    }
+
+}
